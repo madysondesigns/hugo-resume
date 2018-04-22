@@ -1,9 +1,10 @@
 :root {
-  --accent-color: #D0021B;
-  --accent-color-hover: #FD0826;
-  --secondary-color: #363D4A;
-  --body-color: #78808F;
-  --knockout-color: #F9FAFB;
+  --color-accent: #D0021B;
+  --color-accent-hover: #FD0826;
+  --color-secondary: #363D4A;
+  --color-body: #78808F;
+  --color-knockout: #FFFFFF;
+  --color-knockout-hover: rgba(255, 255, 255, 0.8);
 
   --font-family: 'Muli', sans-serif;
   --font-light: 300;
@@ -14,10 +15,15 @@
 
   --base-font-size: 10px;
   --mobile-font-size: calc(50px / 6);
-  --body-font-size: 1.8rem;
-  --h1-font-size: 4.8rem;
-  --post-list-font-size: 2rem;
-  --meta-font-size: 1.4rem;
+
+  --size-xs: 0.8rem;
+  --size-s: 1.6rem;
+  --size-m: 2.4rem;
+  --size-l: 3.6rem;
+  --size-xl: 4.8rem;
+  --size-xxl: 6.4rem;
+
+  --size-menu: 30rem;
 }
 
 html {
@@ -27,10 +33,11 @@ html {
 body {
   font-family: var(--font-family);
   line-height: 1.8;
-  font-weight: var(--font-light);
-  font-size: var(--body-font-size);
-  color: var(--secondary-color);
-  padding-top: 54px;
+  letter-spacing: 0.01rem;
+  font-weight: var(--font-regular);
+  font-size: var(--size-s);
+  color: var(--color-body);
+  padding-top: var(--size-xxl);
 }
 
 * {
@@ -40,7 +47,7 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 0;
-    padding-left: 24rem;
+    padding-left: var(--size-menu);
   }
 }
 
@@ -53,36 +60,28 @@ h6 {
   font-weight: var(--font-extra-bold);
   line-height: 1.25;
   font-style: italic;
-  color: var(--secondary-color);
+  color: var(--color-secondary);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 h1 {
-  font-size: var(--h1-font-size);
+  font-size: var(--size-xl);
+  letter-spacing: 0.05rem;
   font-weight: var(--font-black);
-  color: var(--accent-color);
-  line-height: 5.5rem;
+  color: var(--color-secondary);
 }
 
 h2 {
-  font-size: 3.5rem;
+  color: var(--color-secondary);
+  font-size: var(--size-l);
 }
 
 .subheading {
   font-weight: var(--font-extra-bold);
+  color: var(--color-secondary);
   font-style: italic;
-  font-size: 2.4rem;
-}
-
-.list-social-icons a {
-  color: var(--secondary-color);
-}
-
-.list-social-icons a:hover {
-  color: var(--body-color);
-}
-
-.list-social-icons a .fa-lg {
-  font-size: 2.4rem;
+  font-size: var(--size-m);
 }
 
 .list-icons {
@@ -90,12 +89,67 @@ h2 {
 }
 
 .list-icons .list-inline-item i:hover {
-  color: var(--accent-color);
+  color: var(--color-accent);
+}
+
+.list-social-icons a {
+  color: var(--color-secondary);
+}
+
+.list-social-icons a:hover {
+  color: var(--color-body);
+}
+
+#sideNav {
+  padding: var(--size-s) 8vw;
+}
+
+#sideNav .nav-name {
+  font-size: var(--size-m);
+  font-weight: var(--font-black);
+  letter-spacing: 0.05rem;
+  font-style: italic;
+  color: var(--color-knockout);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#sideNav .nav-location {
+  font-size: var(--size-s);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+  color: var(--color-knockout-hover);
+}
+
+#sideNav a {
+  color: var(--color-knockout);
+}
+
+#sideNav a:hover {
+  color: var(--color-knockout-hover);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: var(--font-semi-bold);
   font-style: italic;
+}
+
+#sideNav .navbar-collapse {
+  order: 99;
+}
+
+#sideNav .navbar-toggler {
+  order: 98;
+  margin-left: auto;
+  border: 0;
+  font-size: var(--size-m);
+  color: var(--color-knockout);
+  outline: none;
+}
+
+.list-social-icons a .fa-lg {
+  font-size: var(--size-s);
+  padding: var(--size-xs);
 }
 
 @media (min-width: 992px) {
@@ -106,29 +160,37 @@ h2 {
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 24rem;
+    width: var(--size-menu);
+    padding: var(--size-m);
     height: 100vh;
+    justify-content: center;
   }
   #sideNav .navbar-brand {
     display: flex;
-    margin: auto auto 0;
-    padding: 0.5rem;
+    margin: 0 auto;
+    flex-direction: column;
   }
+
   #sideNav .navbar-brand .img-profile {
-    max-width: 16rem;
-    max-height: 16rem;
-    border: 1rem solid rgba(255, 255, 255, 0.2);
+    max-width: 18rem;
+    max-height: 18rem;
   }
+
+  #sideNav .nav-name {
+    margin-top: var(--size-s);
+  }
+
   #sideNav .navbar-collapse {
     display: flex;
-    align-items: flex-start;
-    flex-grow: 0;
     width: 100%;
-    margin-bottom: auto;
+    flex-grow: 0;
+    order: 0;
   }
+
   #sideNav .navbar-collapse .navbar-nav {
     flex-direction: column;
     width: 100%;
+    margin: var(--size-m) 0;
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item {
     display: block;
@@ -136,16 +198,23 @@ h2 {
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
   }
+
+  .list-social-icons a .fa-lg {
+    font-size: var(--size-m);
+  }
 }
 
 section.resume-section {
-  border-bottom: 1px solid var(--knockout-color);
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
+  border-bottom: 1px solid var(--color-accent);
+  padding: var(--size-xxl) 3vw;
+  padding-left: 8vw;
+  padding-right: 8vw;
 }
 
 section.resume-section .resume-item .resume-date {
   min-width: none;
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
 }
 
 @media (min-width: 768px) {
@@ -159,27 +228,41 @@ section.resume-section .resume-item .resume-date {
 
 @media (min-width: 992px) {
   section.resume-section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
+    padding-top: var(--size-l) !important;
+    padding-bottom: var(--size-l) !important;
   }
 }
 
 .bg-primary {
-  background-color: var(--accent-color) !important;
+  background-color: var(--color-accent) !important;
 }
 
 .text-primary {
-  color: var(--secondary-color) !important;
+  color: var(--color-secondary) !important;
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--color-accent);
 }
 
 a:hover, a:focus, a:active {
-  color: var(--accent-color-hover);
+  color: var(--color-accent-hover);
 }
 
 img {
-  max-width:80%;
+  max-width: 80%;
+}
+
+#skills ul {
+  padding-left: var(--size-m);
+  margin-bottom: var(--size-s)
+}
+
+#skills li {
+  margin-right: var(--size-s);
+  white-space: nowrap;
+}
+
+#skills .fa {
+  color: var(--color-accent);
 }
