@@ -14,11 +14,6 @@
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="{{ "#about" | relURL }}">About Me</a>
       </li>
-      {{ if .Site.Params.showSkills }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#skills">Skills</a>
-          </li>
-      {{ end }}
       {{ if .Site.Params.showCaseStudies }}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="/#case-studies">Case Studies</a>
@@ -27,6 +22,11 @@
       {{ if .Site.Params.showThoughts }}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="/#thoughts">Thoughts</a>
+          </li>
+      {{ end }}
+      {{ if .Site.Params.showSkills }}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/#skills">Skills</a>
           </li>
       {{ end }}
       {{ if .Site.Params.showExperience }}

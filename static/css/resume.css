@@ -79,6 +79,24 @@ h2 {
   font-size: var(--size-l);
 }
 
+a {
+  color: var(--color-accent);
+}
+
+a:hover, a:focus, a:active {
+  color: var(--color-accent-hover);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+strong {
+  font-weight: var(--font-semi-bold);
+  color: var(--color-secondary);
+}
+
 .subheading {
   font-weight: var(--font-extra-bold);
   color: var(--color-secondary);
@@ -243,18 +261,6 @@ section.resume-section .resume-item .resume-date {
   color: var(--color-secondary) !important;
 }
 
-a {
-  color: var(--color-accent);
-}
-
-a:hover, a:focus, a:active {
-  color: var(--color-accent-hover);
-}
-
-img {
-  max-width: 80%;
-}
-
 #skills ul {
   padding-left: var(--size-m);
   margin-bottom: var(--size-s)
@@ -287,4 +293,79 @@ img {
 
 .breadcrumb .breadcrumb-item+.breadcrumb-item::before {
   color: var(--color-body);
+}
+
+.case-study-excerpt a {
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+}
+
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6{
+    margin-top: var(--size-l);
+    font-weight: var(--font-semi-bold);
+    color: var(--color-secondary);
+}
+
+.content ul, .content ol {
+    list-style-type: none;
+    padding-left: 0;
+    counter-reset: custom-counter;
+    margin-bottom: 2em;
+}
+
+.content ul li, .content ol li {
+    position: relative;
+    margin: 1em 0;
+}
+
+.content ul li:before, .content ol li:before {
+    position: absolute;
+    left: calc(-1 * var(--size-m));
+    counter-increment: custom-counter;
+    color: var(--color-accent);
+}
+
+.content ul p, .content ol p {
+    display: inline;
+    margin: 0;
+}
+
+.content ul li:before {
+    content: counter(custom-counter, disc);
+}
+
+.content ol li:before {
+    content: counter(custom-counter, decimal);
+    font-weight: var(--font-extra-bold);
+    font-style: italic;
+}
+
+.portfolio-figure {
+    max-width: 100%;
+    height: auto;
+    margin: var(--size-l) 0 var(--size-l);
+}
+
+.portfolio-figure figcaption h4 {
+    margin: var(--size-s) auto 0;
+    position: relative;
+    font-weight: var(--font-extra-bold);
+    color: var(--color-secondary);
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.portfolio-figure figcaption h4:before {
+    content: '\f105';
+    font-family: FontAwesome;
+    position: absolute;
+    top: -0.25em;
+    left: calc(-1 * var(--size-m));
+    font-style: normal;
+    font-size: 1.75em;
+    color: var(--color-accent);
 }
