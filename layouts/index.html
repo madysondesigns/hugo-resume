@@ -3,21 +3,17 @@
    {{ if .Site.Params.showSkills }}
        {{ partial "portfolio/skills.html" . }}
    {{ end }}
-   {{ if .Site.Params.showProjects }}
-      {{ with .Site.GetPage "section" "projects/creations" }}
-         {{ .Scratch.Add "sectionId" "projects" }}
+   {{ if .Site.Params.showCaseStudies }}
+      {{ with .Site.GetPage "section" "case-studies" }}
+         {{ .Scratch.Delete "sectionId" }}
+         {{ .Scratch.Add "sectionId" "case-studies" }}
          {{ partial "sectionSummary" . }}
       {{ end }}
    {{ end }}
-   {{ if .Site.Params.showOpenSource }}
-      {{ with .Site.GetPage "section" "projects/contributions" }}
-         {{ .Scratch.Add "sectionId" "open" }}
-         {{ partial "sectionSummary" . }}
-      {{ end }}
-   {{ end }}
-   {{ if .Site.Params.showPublications }}
-      {{ with .Site.GetPage "section" "publications" }}
-         {{ .Scratch.Add "sectionId" "publications" }}
+   {{ if .Site.Params.showThoughts }}
+      {{ with .Site.GetPage "section" "thoughts" }}
+         {{ .Scratch.Delete "sectionId" }}
+         {{ .Scratch.Add "sectionId" "thoughts" }}
          {{ partial "sectionSummary" . }}
       {{ end }}
    {{ end }}

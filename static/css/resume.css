@@ -3,6 +3,7 @@
   --color-accent-hover: #FD0826;
   --color-secondary: #363D4A;
   --color-body: #78808F;
+  --color-container: #EFF1F4;
   --color-knockout: #FFFFFF;
   --color-knockout-hover: rgba(255, 255, 255, 0.8);
 
@@ -22,6 +23,7 @@
   --size-l: 3.6rem;
   --size-xl: 4.8rem;
   --size-xxl: 6.4rem;
+  --size-flexible: 8vw;
 
   --size-menu: 30rem;
 }
@@ -101,7 +103,7 @@ h2 {
 }
 
 #sideNav {
-  padding: var(--size-s) 8vw;
+  padding: var(--size-s) var(--size-flexible);
 }
 
 #sideNav .nav-name {
@@ -206,9 +208,9 @@ h2 {
 
 section.resume-section {
   border-bottom: 1px solid var(--color-accent);
-  padding: var(--size-xxl) 3vw;
-  padding-left: 8vw;
-  padding-right: 8vw;
+  padding: var(--size-xxl) var(--size-flexible);
+  padding-left: var(--size-flexible);
+  padding-right: var(--size-flexible);
 }
 
 section.resume-section .resume-item .resume-date {
@@ -260,9 +262,29 @@ img {
 
 #skills li {
   margin-right: var(--size-s);
-  white-space: nowrap;
 }
 
 #skills .fa {
   color: var(--color-accent);
+}
+
+.breadcrumb {
+  background-color: var(--color-container);
+  border-radius: 0;
+  padding: var(--size-xs) var(--size-flexible);
+}
+
+.breadcrumb a {
+  color: var(--color-secondary);
+  font-weight: var(--font-extra-bold);
+  font-style: italic;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-body);
+  text-decoration: none;
+}
+
+.breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+  color: var(--color-body);
 }

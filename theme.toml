@@ -3,20 +3,13 @@
 
 name = "Resume"
 license = "MIT"
-licenselink = "https://github.com/eddiewebb/hugo-resume/blob/master/LICENSE.md"
-description = "Personal resume with social handles, skills inventory, work history and portfolio. Ported from StartBootstrap 'Resume' theme"
-homepage = "https://edwardwebb.com/"
+licenselink = ""
+description = "Portfolio for Sarah Whinnme"
+homepage = "https://madysondesigns.com/"
 tags = ["portfolio","resume","responsive"]
 features = ["social","mobile","projects","responsive","qr-code"]
 min_version = "0.1"
 
 [author]
-  name = "Eddie Webb"
-  homepage = "https://edwardawebb.com"
-
-
-# If porting an existing theme
-[original]
-  name = "Start Bootstrap Resume"
-  homepage = "https://startbootstrap.com/template-overviews/resume/"
-  repo = "https://github.com/BlackrockDigital/startbootstrap-resume"
+  name = "Sarah Whinnem"
+  homepage = "https://madysondesigns.com/"
