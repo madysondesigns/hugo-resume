@@ -1,5 +1,5 @@
-<section class="resume-section d-flex flex-column" id="{{ .Scratch.Get "sectionId" }}">
-  <div class="my-auto" id="projects-content">
+<section class="resume-section d-flex flex-column align-items-stretch" id="{{ .Scratch.Get "sectionId" }}">
+  <div class="my-auto resume-content" id="projects-content">
     <h2 class="mb-5"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p>{{ .Content }}</p>
     {{ $featuredPages := where .Pages "Params.featured" true }}

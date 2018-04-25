@@ -1,5 +1,5 @@
-<section class="resume-section d-flex d-column" id="about">
-  <div class="my-auto">
+<section class="resume-section d-flex d-column align-items-stretch" id="about">
+  <div class="my-auto resume-content">
     <div class="resume-item d-flex flex-column flex-md-row">
       <div class="mr-auto">
 
@@ -12,7 +12,7 @@
     </div>
     <div>
       {{ .Content }}
-      <ul class="list-inline list-social-icons mb-0">
+      <ul class="list-inline list-social-icons mb-0 mt-4">
         {{ range .Site.Params.handles }}
         <li class="list-inline-item">
           <a href="{{ .link }}" data-toggle="tooltip" title="{{ .name }}" data-offset="0 10" target="_blank">

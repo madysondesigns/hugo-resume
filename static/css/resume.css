@@ -7,12 +7,10 @@
   --color-knockout: #FFFFFF;
   --color-knockout-hover: rgba(255, 255, 255, 0.8);
 
-  --font-family: 'Muli', sans-serif;
-  --font-light: 300;
+  --font-family: 'IBM Plex Sans', sans-serif;
   --font-regular: 400;
   --font-semi-bold: 600;
-  --font-extra-bold: 800;
-  --font-black: 900;
+  --font-bold: 700;
 
   --base-font-size: 10px;
   --mobile-font-size: calc(50px / 6);
@@ -23,9 +21,9 @@
   --size-l: 3.6rem;
   --size-xl: 4.8rem;
   --size-xxl: 6.4rem;
-  --size-flexible: 8vw;
+  --size-flexible: 10vw;
 
-  --size-menu: 30rem;
+  --size-menu: 30vw;
 }
 
 html {
@@ -34,7 +32,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  line-height: 1.8;
+  line-height: 1.6;
   letter-spacing: 0.01rem;
   font-weight: var(--font-regular);
   font-size: var(--size-s);
@@ -59,8 +57,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-extra-bold);
-  line-height: 1.25;
+  font-weight: var(--font-bold);
+  line-height: 1.6;
   font-style: italic;
   color: var(--color-secondary);
   margin-top: 1em;
@@ -70,13 +68,15 @@ h6 {
 h1 {
   font-size: var(--size-xl);
   letter-spacing: 0.05rem;
-  font-weight: var(--font-black);
-  color: var(--color-secondary);
+  font-weight: var(--font-bold);
+  color: var(--color-accent);
+  line-height: 1.2;
 }
 
 h2 {
-  color: var(--color-secondary);
+  color: var(--color-accent);
   font-size: var(--size-l);
+  line-height: 1.2;
 }
 
 a {
@@ -98,7 +98,7 @@ strong {
 }
 
 .subheading {
-  font-weight: var(--font-extra-bold);
+  font-weight: var(--font-bold);
   color: var(--color-secondary);
   font-style: italic;
   font-size: var(--size-m);
@@ -121,12 +121,12 @@ strong {
 }
 
 #sideNav {
-  padding: var(--size-s) var(--size-flexible);
+  padding: var(--size-s) var(--size-m);
 }
 
 #sideNav .nav-name {
   font-size: var(--size-m);
-  font-weight: var(--font-black);
+  font-weight: var(--font-bold);
   letter-spacing: 0.05rem;
   font-style: italic;
   color: var(--color-knockout);
@@ -136,7 +136,7 @@ strong {
 
 #sideNav .nav-location {
   font-size: var(--size-s);
-  font-weight: var(--font-extra-bold);
+  font-weight: var(--font-bold);
   font-style: italic;
   color: var(--color-knockout-hover);
 }
@@ -227,13 +227,11 @@ strong {
 section.resume-section {
   border-bottom: 1px solid var(--color-accent);
   padding: var(--size-xxl) var(--size-flexible);
-  padding-left: var(--size-flexible);
-  padding-right: var(--size-flexible);
 }
 
 section.resume-section .resume-item .resume-date {
   min-width: none;
-  font-weight: var(--font-extra-bold);
+  font-weight: var(--font-bold);
   font-style: italic;
 }
 
@@ -247,9 +245,8 @@ section.resume-section .resume-item .resume-date {
 }
 
 @media (min-width: 992px) {
-  section.resume-section {
-    padding-top: var(--size-l) !important;
-    padding-bottom: var(--size-l) !important;
+  .resume-content {
+    max-width: 60rem;
   }
 }
 
@@ -277,13 +274,13 @@ section.resume-section .resume-item .resume-date {
 .breadcrumb {
   background-color: var(--color-container);
   border-radius: 0;
-  padding: var(--size-xs) var(--size-flexible);
+  padding: var(--size-xs) var(--size-m);
+  font-weight: var(--font-bold);
+  font-style: italic;
 }
 
 .breadcrumb a {
   color: var(--color-secondary);
-  font-weight: var(--font-extra-bold);
-  font-style: italic;
 }
 
 .breadcrumb a:hover {
@@ -296,8 +293,13 @@ section.resume-section .resume-item .resume-date {
 }
 
 .case-study-excerpt a {
-  font-weight: var(--font-extra-bold);
+  font-weight: var(--font-bold);
   font-style: italic;
+}
+
+.content {
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 .content h2,
@@ -324,7 +326,7 @@ section.resume-section .resume-item .resume-date {
 
 .content ul li:before, .content ol li:before {
     position: absolute;
-    left: calc(-1 * var(--size-m));
+    left: calc(-1 * var(--size-s));
     counter-increment: custom-counter;
     color: var(--color-accent);
 }
@@ -340,7 +342,8 @@ section.resume-section .resume-item .resume-date {
 
 .content ol li:before {
     content: counter(custom-counter, decimal);
-    font-weight: var(--font-extra-bold);
+    left: calc(-1 * var(--size-m));
+    font-weight: var(--font-bold);
     font-style: italic;
 }
 
@@ -353,19 +356,20 @@ section.resume-section .resume-item .resume-date {
 .portfolio-figure figcaption h4 {
     margin: var(--size-s) auto 0;
     position: relative;
-    font-weight: var(--font-extra-bold);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 0.1px;
     color: var(--color-secondary);
     font-style: italic;
-    font-size: 0.8em;
+    font-size: 0.875em;
 }
 
 .portfolio-figure figcaption h4:before {
     content: '\f105';
     font-family: FontAwesome;
     position: absolute;
-    top: -0.25em;
-    left: calc(-1 * var(--size-m));
+    top: -0.3em;
+    left: calc(-1 * var(--size-s));
     font-style: normal;
-    font-size: 1.75em;
+    font-size: 1.5em;
     color: var(--color-accent);
 }
