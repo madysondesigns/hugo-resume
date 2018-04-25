@@ -2,7 +2,7 @@
 {{ partial "breadcrumbs" . }}
 <section class="resume-section d-flex d-column">
   <div class="my-auto content">
-    <h1 class="my-0"><span class="text-primary">Case Study: {{ .Title }}</span></h1>
+    <h1 class="my-0">Case Study: {{ .Title }}</h1>
     {{ .Content }}
     {{ with .Params.link }}<p>Project link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}
     {{ partial "techtags" . }}
