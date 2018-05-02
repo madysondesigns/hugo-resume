@@ -5,8 +5,8 @@ name = "Resume"
 license = "MIT"
 licenselink = ""
 description = "Portfolio for Sarah Whinnme"
-homepage = "https://madysondesigns.com/"
-tags = ["portfolio","resume","responsive"]
+homepage = "https://portfolio.madysondesigns.com/"
+tags = ["portfolio","resume","responsive","product design"]
 features = ["social","mobile","projects","responsive","qr-code"]
 min_version = "0.1"
 
