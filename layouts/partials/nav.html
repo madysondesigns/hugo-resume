@@ -4,6 +4,7 @@
       <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ .Site.Params.profileImage | relURL }}" alt="">
     </div>
     <h1 class="d-block nav-name">{{ .Site.Params.firstName }} {{ .Site.Params.lastName }}</h1>
+    <div class="d-none d-lg-block nav-location">{{ .Site.Params.contactNote }}</div>
     <div class="d-none d-lg-block nav-location">{{ .Site.Params.address }}</div>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
