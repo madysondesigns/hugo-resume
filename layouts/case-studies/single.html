@@ -6,6 +6,8 @@
     {{ .Content }}
     {{ with .Params.link }}<p>Project link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}
     {{ partial "techtags" . }}
+
+    <p class="case-disclosure"><small>All information in this case study reflects my thoughts and does not necessarily reflect the views of the company. To comply with my non-disclosure agreement, I have omitted and anonymized confidential information.</small></p>
   </div>
 </section>
 {{ end }}

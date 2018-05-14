@@ -1,4 +1,4 @@
-<ul class="tags mt-5">
+<ul class="tags mt-4">
     {{ range  .Params.tags }}
       <li><a class="tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
     {{ end }}
