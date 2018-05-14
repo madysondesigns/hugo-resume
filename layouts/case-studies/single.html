@@ -3,6 +3,8 @@
 <section class="resume-section d-flex d-column">
   <div class="my-auto content">
     <h1 class="my-0">Case Study: {{ .Title }}</h1>
+    <h3>TL;DR</h3>
+    <p>{{ .Params.description }}</p>
     {{ .Content }}
     {{ with .Params.link }}<p>Project link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}
     {{ partial "techtags" . }}
