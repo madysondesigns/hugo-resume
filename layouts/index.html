@@ -7,10 +7,10 @@
          {{ partial "sectionSummary" . }}
       {{ end }}
    {{ end }}
-   {{ if .Site.Params.showThoughts }}
-      {{ with .Site.GetPage "section" "thoughts" }}
+   {{ if .Site.Params.showWriting }}
+      {{ with .Site.GetPage "section" "writing" }}
          {{ .Scratch.Delete "sectionId" }}
-         {{ .Scratch.Add "sectionId" "thoughts" }}
+         {{ .Scratch.Add "sectionId" "writing" }}
          {{ partial "sectionSummary" . }}
       {{ end }}
    {{ end }}
