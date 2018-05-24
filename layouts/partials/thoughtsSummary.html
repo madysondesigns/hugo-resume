@@ -1,12 +1,16 @@
-
-<div class="resume-item d-flex flex-column flex-md-row mb-5">
-  <div class="thought-content mr-auto">
-    <h3 class="mb-0">{{ .Params.pubtype }} - <a href="{{ .Permalink }}">{{ .Params.title }}</a></h3>
-    <div>{{ .Params.description | safeHTML }}</div>
-    <p>{{ partial "techtags" . }}</p>
-  </div>
-  <div class="resume-date text-md-right">
-    <span class="text-primary">{{ .Params.date | dateFormat "January 2006" }}</span>
-    <img src="{{ .Params.image }}" style="max-width:250px;padding:5px;"/>
-  </div>
+<div class="resume-item mt-l">
+    <div class="resume-content mr-auto">
+        <h4 class="mt-0">{{ .Params.pubtype }} </h4>
+        <h3 class="my-0"><a href="{{ .Permalink }}">{{ .Params.title }}</a></h3>
+        <p>{{ .Params.description | safeHTML }}</p>
+    </div>
+    <div class="resume-date text-md-right">
+        <span class="text-primary">{{ .Params.date | dateFormat "January 2006" }}</span>
+        <div class="case-study-photo mr-4">
+            {{with  .Params.image }}
+            <img src="{{ . }}" style="max-height:150px;max-width:250px;"/>
+            {{ end }}
+        </div>
+    </div>
 </div>
+<p>{{ partial "techtags" . }}</p>

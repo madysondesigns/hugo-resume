@@ -4,7 +4,7 @@
 	  <a href="{{ "#about" | relURL }}">Home</a>
 	</li>
 	<li class="breadcrumb-item">
-	  <a href="/{{ .Section | urlize }}/">Case Studies</a>
+	  <a href="/{{ .Section | urlize }}/">{{ .Section | humanize | title }}</a>
 	</li>
 	{{ if not .Parent.IsHome }}
 	<li class="breadcrumb-item">

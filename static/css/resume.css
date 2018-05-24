@@ -130,6 +130,24 @@ strong {
   color: var(--color-secondary);
 }
 
+blockquote {
+  margin-top: var(--size-m);
+  margin-right: 0;
+  margin-bottom: var(--size-m);
+  margin-left: calc(-1 * var(--size-s));
+  padding: var(--size-xxs) var(--size-s);
+  border-left: 2px solid var(--color-accent);
+  line-height: 1.5;
+  font-size: var(--size-h4);
+  font-weight: var(--font-semi-bold);
+  font-style: italic;
+  color: var(--color-secondary);
+}
+
+blockquote p {
+  margin: 0 !important;
+}
+
 .case-disclosure {
   line-height: 1.25;
   font-style: italic;
