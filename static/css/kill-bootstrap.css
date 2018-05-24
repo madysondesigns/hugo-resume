@@ -109,6 +109,10 @@
   margin-left: auto !important;
 }
 
+.p-0{
+  margin: 0 auto;
+}
+
 .m-0 {
   margin: 0 !important;
 }
