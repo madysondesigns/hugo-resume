@@ -226,6 +226,31 @@ strong {
   padding: var(--size-xs);
 }
 
+section.resume-section {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-accent);
+  padding: var(--size-xxl) var(--size-flexible);
+}
+
+.resume-content h2 {
+  margin-bottom: var(--size-l);
+}
+
+.resume-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: var(--size-m);
+}
+
+.resume-date {
+  min-width: none;
+  font-weight: var(--font-bold);
+  font-style: italic;
+}
+
 @media (min-width: 992px) {
   #sideNav {
     text-align: center;
@@ -271,9 +296,11 @@ strong {
     width: 100%;
     margin: var(--size-m) 0;
   }
+
   .nav-item {
     display: block;
   }
+
   .nav-link {
     display: block;
     padding: .5rem 1rem;
@@ -282,33 +309,27 @@ strong {
   .list-social-icons a .fa-lg {
     font-size: var(--size-m);
   }
-}
 
-section.resume-section {
-  border-bottom: 1px solid var(--color-accent);
-  padding: var(--size-xxl) var(--size-flexible);
-}
-
-section.resume-section .resume-item .resume-date {
-  min-width: none;
-  font-weight: var(--font-bold);
-  font-style: italic;
+  .resume-content {
+    max-width: 60rem;
+  }
 }
 
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
   }
+
+  .resume-item {
+    flex-direction: row;
+  }
+
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
+    text-align: right;
   }
 }
 
-@media (min-width: 992px) {
-  .resume-content {
-    max-width: 60rem;
-  }
-}
 
 .bg-primary {
   background-color: var(--color-accent) !important;
@@ -324,6 +345,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 #skills li {
+  display: inline-block;
   margin-right: var(--size-s);
 }
 
