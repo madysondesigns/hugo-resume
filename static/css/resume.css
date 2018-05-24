@@ -1,3 +1,6 @@
+@import url('normalize.css');
+@import url('kill-bootstrap.css');
+
 :root {
   --color-accent: #D0021B;
   --color-accent-hover: #FD0826;
@@ -23,12 +26,22 @@
   --size-xxl: 6.4rem;
   --size-flexible: 10vw;
 
+  --size-h4: 1.8rem;
+  --size-h6: 1.4rem;
+
   --size-menu: 30vw;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: inherit;
 }
 
 html {
   font-size: var(--base-font-size);
+  box-sizing: border-box;
 }
+
 
 body {
   font-family: var(--font-family);
@@ -57,8 +70,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-bold);
   line-height: 1.75;
+  font-weight: var(--font-bold);
   font-style: italic;
   color: var(--color-secondary);
   margin-top: 1em;
@@ -67,20 +80,37 @@ h6 {
 
 h1 {
   font-size: var(--size-xl);
-  letter-spacing: 0.05rem;
-  font-weight: var(--font-bold);
-  color: var(--color-accent);
   line-height: 1.333333;
+  font-weight: var(--font-bold);
+  letter-spacing: 0.05rem;
+  color: var(--color-accent);
 }
 
 h2 {
-  color: var(--color-accent);
   font-size: var(--size-l);
   line-height: 1.333333;
+  color: var(--color-accent);
+}
+
+h3 {
+  font-size: var(--size-m);
+}
+
+h4 {
+  font-size: var(--size-h4);
+}
+
+h5 {
+  font-size: var(--size-s);
+}
+
+h6 {
+  font-size: var(--size-h6);
 }
 
 a {
   color: var(--color-accent);
+  text-decoration: none;
 }
 
 a:hover, a:focus, a:active {
@@ -127,10 +157,22 @@ strong {
 }
 
 #sideNav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: var(--size-s) var(--size-m);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-#sideNav .nav-name {
+.navbar-brand {
+  display: inline-block;
+}
+
+.nav-name {
   font-size: var(--size-m);
   font-weight: var(--font-bold);
   letter-spacing: 0.05rem;
@@ -140,7 +182,7 @@ strong {
   margin-top: 0;
 }
 
-#sideNav .nav-location {
+.nav-location {
   font-size: var(--size-s);
   font-weight: var(--font-bold);
   font-style: italic;
@@ -155,16 +197,22 @@ strong {
   color: var(--color-knockout-hover);
 }
 
-#sideNav .navbar-nav .nav-item .nav-link {
-  font-weight: var(--font-semi-bold);
-  font-style: italic;
+.navbar-nav {
+  margin-bottom: 0;
 }
 
-#sideNav .navbar-collapse {
+.nav-link {
+  font-weight: var(--font-semi-bold);
+  font-style: italic;
+  padding: .5rem 0;
+  display: block;
+}
+
+.navbar-collapse {
   order: 99;
 }
 
-#sideNav .navbar-toggler {
+.navbar-toggler {
   order: 98;
   margin-left: auto;
   border: 0;
@@ -181,48 +229,54 @@ strong {
 @media (min-width: 992px) {
   #sideNav {
     text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
     flex-direction: column;
     width: var(--size-menu);
     padding: var(--size-m);
     height: 100vh;
     justify-content: center;
+    align-items: center;
   }
-  #sideNav .navbar-brand {
+  .navbar-brand {
     display: flex;
     margin: 0 auto;
     flex-direction: column;
   }
 
-  #sideNav .navbar-brand .img-profile {
+  .navbar-brand .img-profile {
     max-width: 18rem;
     max-height: 18rem;
+    border-radius: 100em;
   }
 
-  #sideNav .nav-name {
+  .nav-name {
     margin-top: var(--size-s);
   }
 
-  #sideNav .navbar-collapse {
+  .navbar-collapse {
     display: flex;
-    width: 100%;
+    flex-basis: auto;
     flex-grow: 0;
     order: 0;
+    width: 100%;
   }
 
-  #sideNav .navbar-collapse .navbar-nav {
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-nav {
+    display: flex;
+    padding-left: 0;
     flex-direction: column;
     width: 100%;
     margin: var(--size-m) 0;
   }
-  #sideNav .navbar-collapse .navbar-nav .nav-item {
+  .nav-item {
     display: block;
   }
-  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+  .nav-link {
     display: block;
+    padding: .5rem 1rem;
   }
 
   .list-social-icons a .fa-lg {
