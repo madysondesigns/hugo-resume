@@ -2,7 +2,7 @@
   <div class="my-auto resume-content" id="skills-content">
     <h2 class="mb-5">Skills</h2>
     {{ range $.Site.Data.skills }}
-        <div class="subheading mb-3 skills-heading">{{ .grouping }}</div>
+        <h3>{{ .grouping }}</h3>
             <ul class="list-unstyled">
             {{ range .skills }}
               <li class="d-sm-inline-block">

@@ -134,10 +134,7 @@ strong {
 }
 
 .subheading {
-  font-weight: var(--font-bold);
-  color: var(--color-secondary);
-  font-style: italic;
-  font-size: var(--size-m);
+  margin-top: 0;
 }
 
 .list-icons {
@@ -374,9 +371,19 @@ section.resume-section {
   color: var(--color-body);
 }
 
+.case-study-excerpt p {
+  margin-top: 0;
+  margin-bottom: var(--size-xs);
+}
+
 .case-study-excerpt a {
   font-weight: var(--font-bold);
   font-style: italic;
+}
+
+.case-study-photo {
+  margin-right: var(--size-s);
+  margin-top: var(--size-xs);
 }
 
 .content {

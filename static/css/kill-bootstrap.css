@@ -43,6 +43,10 @@
   display: none;
 }
 
+.collapse.show {
+  display: block;
+}
+
 .collapsing {
   position: relative;
   height: 0;
