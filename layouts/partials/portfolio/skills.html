@@ -1,8 +1,8 @@
-<section class="resume-section d-flex flex-column align-items-stretch" id="skills">
+<section class="resume-section" id="skills">
   <div class="my-auto resume-content" id="skills-content">
     <h2 class="mb-5">Skills</h2>
     {{ range $.Site.Data.skills }}
-        <h3>{{ .grouping }}</h3>
+        <h3 class="mb-0">{{ .grouping }}</h3>
             <ul class="list-unstyled">
             {{ range .skills }}
               <li class="d-sm-inline-block">

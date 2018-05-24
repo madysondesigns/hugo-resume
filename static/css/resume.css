@@ -18,6 +18,7 @@
   --base-font-size: 10px;
   --mobile-font-size: calc(50px / 6);
 
+  --size-xxs: 0.4rem;
   --size-xs: 0.8rem;
   --size-s: 1.6rem;
   --size-m: 2.4rem;
@@ -70,12 +71,12 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.75;
+  line-height: 1.5;
   font-weight: var(--font-bold);
   font-style: italic;
   color: var(--color-secondary);
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
 
 h1 {
@@ -108,12 +109,14 @@ h6 {
   font-size: var(--size-h6);
 }
 
-a {
+a, a h1, a h2, a h3, a h4, a h5, a h6 {
   color: var(--color-accent);
   text-decoration: none;
 }
 
-a:hover, a:focus, a:active {
+a:hover, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6
+a:focus, a:focus h1, a:focus h2, a:focus h3, a:focus h4, a:focus h5, a:focus h6
+a:active, a:active h1, a:active h2, a:active h3, a:active h4, a:active h5, a:active h6 {
   color: var(--color-accent-hover);
   text-decoration: none;
 }
@@ -229,10 +232,6 @@ section.resume-section {
   flex-direction: column;
   border-bottom: 1px solid var(--color-accent);
   padding: var(--size-xxl) var(--size-flexible);
-}
-
-.resume-content h2 {
-  margin-bottom: var(--size-l);
 }
 
 .resume-item {
@@ -351,6 +350,9 @@ section.resume-section {
 }
 
 .breadcrumb {
+  display: flex;
+  margin: 0;
+  list-style: none;
   background-color: var(--color-container);
   border-radius: 0;
   padding: var(--size-xs) var(--size-m);
@@ -369,6 +371,10 @@ section.resume-section {
 
 .breadcrumb .breadcrumb-item+.breadcrumb-item::before {
   color: var(--color-body);
+  display: inline-block;
+  padding-left: var(--size-xs);
+  padding-right: var(--size-xxs);
+  content: "/";
 }
 
 .case-study-excerpt p {
