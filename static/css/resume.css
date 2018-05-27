@@ -410,6 +410,11 @@ section.resume-section {
   margin-top: var(--size-xs);
 }
 
+.writing-photo {
+  margin-left: var(--size-s);
+  margin-top: var(--size-m);
+}
+
 .content {
   max-width: 60rem;
   margin: 0 auto;
