@@ -3,7 +3,6 @@
 <section class="resume-section">
   <div class="my-auto content">
     <h1 class="my-0">{{ .Title }}</h1>
-    {{ with .Params.image }}<img src="{{ . }}" style="max-height:300px;max-width:30%;" align="right"/>{{ end }}
     {{ .Content }}
     {{ partial "techtags" . }}
   </div>
