@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{{ .Title }}</title>
-  <link rel="icon" type="image/png" href="{{ .Site.Params.profileImage | relURL }}.png?s=32" />
+  <link rel="icon" type="image/png" href="{{ .Site.Params.profileImage }}.png?s=32" />
   <meta property="og:title" content="{{ .Title }}" />
   {{ with .Params.images }}
     {{ range first 6 . }}<meta property="og:image" content="{{ . | absURL }}" />{{ end }}

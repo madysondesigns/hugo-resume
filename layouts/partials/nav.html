@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
   <a class="navbar-brand js-scroll-trigger" href="{{ "#about" | relURL }}">
     <div class="d-none d-lg-block">
-      <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ .Site.Params.profileImage | relURL }}?s=400" alt="">
+      <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ .Site.Params.profileImage }}?s=400" alt="">
     </div>
     <h1 class="d-block nav-name">{{ .Site.Params.firstName }} {{ .Site.Params.lastName }}</h1>
     <div class="d-none d-lg-block nav-location">{{ .Site.Params.contactNote }}</div>
